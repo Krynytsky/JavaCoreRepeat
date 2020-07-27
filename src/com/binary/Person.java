@@ -43,7 +43,6 @@ public class Person {
     public int hashCode() {
         return Objects.hash(getName(), getAge());
     }
-
     @Override
     public String toString() {
         return "Person{" +
@@ -51,6 +50,8 @@ public class Person {
                 ", age=" + age +
                 '}';
     }
+
+
     public void pupAge() {
         int age = 10;
         age = age * 7;

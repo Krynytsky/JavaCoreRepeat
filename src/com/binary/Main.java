@@ -1,10 +1,7 @@
 package com.binary;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Predicate;
 
 public class Main {
@@ -18,21 +15,44 @@ public class Main {
 //        Person p1 = new Person("petro",25);
 //        System.out.println(p1);
 
-        List<Person> persons = new ArrayList<>();
+        Set<Person> persons = new HashSet<>();
         persons.add(new Person("yurii", 26));
+//  ignored duplicates during the iteration, while we have equals() and hashCode() methods
+        persons.add(new Person("yurii", 26));
+        persons.add(new Person("pablo", 27));
+//        possible to store null
+        persons.add(new Person("null", 11));
         persons.add(new Person("vika", 23));
         persons.add(new Person("timyr", 19));
         persons.add(new Person("oksana", 15));
-        int i = persons.size();
+        persons.add(new Person("kris", 20));
+        persons.add(new Person("emily", 26));
 
-        for (Person person : persons) {
-            System.out.println(person);
-        }
+//        for (Person person : persons) {
+//            System.out.println(person);
+//      }
 
-        String name = "yurii";
+        Set<String> stringSet, sh;
+        sh = new HashSet<>();
+        sh.add("1");
+        sh.add("3");
+        sh.add("4");
+        sh.add("6");
+        sh.add("8");
+        sh.add("0");
+        sh.add("2");
+        System.out.println(sh);
+
+        stringSet = new TreeSet<>(sh);
+        System.out.println(stringSet);
+        System.out.println(sh);
+
+
+
+//        String name = "yurii";
 
 //        name = new String("vika");
-        System.out.println(name);
+//        System.out.println(name);
 
 
 
@@ -43,7 +63,7 @@ public class Main {
 //        person1.pupAge();
 
 
-//     System.out.println(persons.listIterator());
+     System.out.println(persons.iterator().toString());
     }
 }
 
