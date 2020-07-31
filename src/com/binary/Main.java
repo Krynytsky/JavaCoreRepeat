@@ -21,7 +21,7 @@ public class Main {
         persons.add(new Person("yurii", 26));
         persons.add(new Person("pablo", 27));
 //        possible to store null
-        persons.add(new Person("null", 11));
+        persons.add(new Person(null, 11));
         persons.add(new Person("vika", 23));
         persons.add(new Person("timyr", 19));
         persons.add(new Person("oksana", 15));
