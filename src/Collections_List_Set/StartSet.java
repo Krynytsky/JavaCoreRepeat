@@ -1,22 +1,22 @@
-package Alfa;
+package Collections_List_Set;
 
 import java.util.*;
 
 public class StartSet {
     public static void main(String[] args) {
         Set<Employer> employers = new LinkedHashSet<>();
-        employers.add(new Employer(13, "Hay", new Group(1, "Alfa")));
-        employers.add(new Employer(13, "Hay", new Group(1, "Alfa")));
-        employers.add(new Employer(13, "Hay", new Group(1, "Alfa")));
-        employers.add(new Employer(13, "Hay", new Group(1, "Alfa")));
-        employers.add(new Employer(25, "Brodjak", new Group(1, "Alfa")));
-        employers.add(new Employer(2, "Purih", new Group(1, "Alfa")));
-        employers.add(new Employer(13, "Hay", new Group(1, "Alfa")));
-        employers.add(new Employer(4, "Chuhay", new Group(1, "Alfa")));
-        employers.add(new Employer(2, "Vasjytik", new Group(1, "Alfa")));
-        employers.add(new Employer(6, "Rogach", new Group(1, "Alfa")));
-        employers.add(new Employer(7, "Mejvinskiy", new Group(1, "Alfa")));
-        employers.add(new Employer(8, "Petrusik", new Group(1, "Alfa")));
+        employers.add(new Employer(13, "Hay", new Group(1, "Collections_List_Set")));
+        employers.add(new Employer(13, "Hay", new Group(1, "Collections_List_Set")));
+        employers.add(new Employer(13, "Hay", new Group(1, "Collections_List_Set")));
+        employers.add(new Employer(13, "Hay", new Group(1, "Collections_List_Set")));
+        employers.add(new Employer(25, "Brodjak", new Group(1, "Collections_List_Set")));
+        employers.add(new Employer(2, "Purih", new Group(1, "Collections_List_Set")));
+        employers.add(new Employer(13, "Hay", new Group(1, "Collections_List_Set")));
+        employers.add(new Employer(4, "Chuhay", new Group(1, "Collections_List_Set")));
+        employers.add(new Employer(2, "Vasjytik", new Group(1, "Collections_List_Set")));
+        employers.add(new Employer(6, "Rogach", new Group(1, "Collections_List_Set")));
+        employers.add(new Employer(7, "Mejvinskiy", new Group(1, "Collections_List_Set")));
+        employers.add(new Employer(8, "Petrusik", new Group(1, "Collections_List_Set")));
 
         Set<Employer> barygas = new LinkedHashSet<>();
         barygas.add(new Employer(289, "Brodjak", new Group(1, "colorado")));
