@@ -1,8 +1,14 @@
 package Alfa;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Objects;
 
-public class Employer {
+/**
+ * implements comparator when we want to use TreeSet<> -
+ * implementation of the Set Collection
+ */
+public class Employer implements Comparable <Employer>{
     private int id;
     private String name;
     private Group groupId;
@@ -59,5 +65,11 @@ public class Employer {
                 ", name='" + name + '\'' +
                 ", groupId=" + groupId +
                 '}';
+    }
+
+
+    @Override
+    public int compareTo(@NotNull Employer employer) {
+        return this.id - employer.id;
     }
 }

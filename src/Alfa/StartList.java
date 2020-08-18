@@ -5,7 +5,7 @@ import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class Start {
+public class StartList {
     public static void main(String[] args) {
         List<Employer> employers = new ArrayList<>();
         employers.add(new Employer(25, "Brodjak", new Group(1, "Alfa")));
@@ -27,8 +27,8 @@ public class Start {
 ////            System.out.println(employer);
 ////        }
 ////      Collection method indexOf() - return  actual index of the existing List employers starting from 0
-//        int i = employers.indexOf(new Employer(5, "Vasjytik", new Group(1, "Alfa")));
-//        System.out.println(i);
+//        int index = employers.indexOf(new Employer(5, "Vasjytik", new Group(1, "Alfa")));
+//        System.out.println(index);
 //
 ////      Collection method size() - return int value that shows size of the barygas List
 //        int sizeOfBarygasList = barygas.size();
@@ -37,12 +37,15 @@ public class Start {
 ////      Collection method add(i,Object o) - add new Object in the employers List in position with specific index i
 //        employers.add(0, new Employer(9, "Xliborez", new Group(1, "Alfa")));
 //
-////      Collection method addAll(Collection<?extends Employer> collection) -add new collection
-////      in position with specific index i
-//        employers.addAll(5, barygas);
-//        System.out.println("=================");
-//        employers.forEach(System.out::println);
-//        System.out.println("=================");
+//      Collection method addAll(Collection<?extends Employer> collection) -add new collection
+//      in position with specific index i
+        employers.addAll(5, barygas);
+        System.out.println("=================");
+        employers.forEach(System.out::println);
+        System.out.println("=================");
+
+        employers.removeAll(barygas);
+        employers.stream().sorted(Comparator.comparingInt(Employer::getId)).forEach(System.out::println);
 //
 ////      collection method get()- get the value of employers List in concreate position
 //        Employer employer3 = employers.get(6);
@@ -66,13 +69,15 @@ public class Start {
 ////            System.out.println(employer);
 ////        }
 ////      Using stream to sort and iterate the barygas ArrayList
-        barygas.stream()
-//                Ussing lambda expression
-                .sorted((o, o2) -> o2.getId() - o.getId())
-                .filter((s) -> s.getId() > 100)
-                .collect(Collectors.toList())
-//                 using method referencies
-                .forEach(System.out::println);
-    }
+//        barygas.stream()
+////                Ussing lambda expression
+//                .sorted((o, o2) -> o2.getId() - o.getId())
+//                .filter((s) -> s.getId() > 100)
+//                .collect(Collectors.toList())
+////                 using method referencies
+//                .forEach(System.out::println);
 
+
+
+    }
 }
