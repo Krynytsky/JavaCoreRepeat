@@ -1,4 +1,4 @@
-package com.binary;
+package com.composition_agregation;
 
 import java.util.Objects;
 
@@ -52,9 +52,4 @@ public class Person {
     }
 
 
-    public void pupAge() {
-        int age = 10;
-        age = age * 7;
-        System.out.println("Puppy age is : " + age);
-    }
 }
