@@ -10,10 +10,19 @@ public class Employer {
     public Employer() {
     }
 
-    public Employer(int id, String name,Address address) {
+    //      example of composition
+    public Employer(int id, String name, Address address) {
         this.id = id;
         this.name = name;
         this.address = address;
+    }
+
+    //      example of agregation
+    public Employer(int id, String name, String city, String street, int zipCode) {
+        this.id = id;
+        this.name = name;
+        this.address = new Address(city, street, zipCode);
+
     }
 
     public int getId() {
