@@ -1,11 +1,10 @@
 package Alfa;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class StartSet {
     public static void main(String[] args) {
-        Set<Employer> employers = new HashSet<>();
+        Set<Employer> employers = new LinkedHashSet<>();
         employers.add(new Employer(13, "Hay", new Group(1, "Alfa")));
         employers.add(new Employer(13, "Hay", new Group(1, "Alfa")));
         employers.add(new Employer(13, "Hay", new Group(1, "Alfa")));
@@ -19,7 +18,7 @@ public class StartSet {
         employers.add(new Employer(7, "Mejvinskiy", new Group(1, "Alfa")));
         employers.add(new Employer(8, "Petrusik", new Group(1, "Alfa")));
 
-        Set<Employer> barygas = new TreeSet<>();
+        Set<Employer> barygas = new LinkedHashSet<>();
         barygas.add(new Employer(289, "Brodjak", new Group(1, "colorado")));
         barygas.add(new Employer(2, "Purih", new Group(1, "colorado")));
         barygas.add(new Employer(33, "Ahay", new Group(1, "colorado")));
@@ -32,10 +31,24 @@ public class StartSet {
 //        barygas.stream().sorted(Comparator.comparing(Employer::getName))
 //                .forEach(System.out::println);
 
-employers.stream()
-        .sorted(Comparator.comparingInt(Employer::getId))
-        .forEach(System.out::println);
+//        employers.stream()
+//                .sorted(Comparator.comparingInt(Employer::getId))
+//                .forEach(System.out::println);
 
-        }
+/**
+ * Use iterator when you work with collections
+ * */
+        employers.removeIf(next -> next.getId() == 25);
+//Code above is the same
+//        Iterator<Employer> iterator = employers.iterator();
+//        while (iterator.hasNext()) {
+//            Employer next = iterator.next();
+//            if (next.getId() == 25) {
+//                iterator.remove();
+//            }
+//        }
+        employers.forEach(System.out::println);
+
     }
+}
 

@@ -8,7 +8,7 @@ import java.util.Objects;
  * implements comparator when we want to use TreeSet<> -
  * implementation of the Set Collection
  */
-public class Employer implements Comparable <Employer>{
+public class Employer {
     private int id;
     private String name;
     private Group groupId;
@@ -68,8 +68,8 @@ public class Employer implements Comparable <Employer>{
     }
 
 
-    @Override
-    public int compareTo(@NotNull Employer employer) {
-        return this.id - employer.id;
-    }
+/**    @Override
+ *   public int compareTo(@NotNull Employer employer) {
+ *       return this.id - employer.id;
+ */
 }
