@@ -1,8 +1,7 @@
-package com.binary;
+package com.composition_agregation;
 
 
 import java.util.*;
-import java.util.function.Predicate;
 
 public class Main {
 
